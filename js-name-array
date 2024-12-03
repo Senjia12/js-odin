@@ -30,12 +30,11 @@
     const para = document.createElement('p');
 
     // Add your code here
-chooseName(names) {
-  let length = names.lenght - 1;
-  let index = Math.random(length);
-  name = names[index];
-  para.append(name);
+function chooseName() {
+  para.append(names[Math.floor(Math.random() * names.length)]);
   }
+
+chooseName()
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
