@@ -13,14 +13,30 @@ let blackpink_div = document.createElement('div');
 blackpink_div.style.backgroundColor = "pink";
 blackpink_div.style.border = "2px solid black";
 
-let add_h1 = document.createElement('h1')
-add_h1.textContent = "I'm in a div."
-blackpink_div.appendChild(add_h1)
+let add_h1 = document.createElement('h1');
+add_h1.textContent = "I'm in a div.";
+blackpink_div.appendChild(add_h1);
 
-let add_p = document.createElement('p')
-add_p.textContent = "ME TOO!"
-blackpink_div.appendChild(add_p)
+let add_p = document.createElement('p');
+add_p.textContent = "ME TOO!";
+blackpink_div.appendChild(add_p);
 
-html_body.appendChild(blackpink_div)
+html_body.appendChild(blackpink_div);
 
-console.log("reached the end, everything should be working")
+
+//Event listeners, 3 methods
+
+function alertFunction() {
+    alert("Hello World 1")
+}
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hellow World 2")
+
+const better_btn = document.querySelector('#better_btn')
+console.log(better_btn)
+better_btn.addEventListener("click", () => {
+    alert("Hello World 3");
+});
+
+console.log("reached the end, everything should be working");
