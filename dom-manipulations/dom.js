@@ -34,9 +34,13 @@ const btn = document.querySelector("#btn");
 btn.onclick = () => alert("Hellow World 2")
 
 const better_btn = document.querySelector('#better_btn')
-console.log(better_btn)
+
+btn.addEventListener("click", e => console.log(e, e.target)); //callback function here e is an object which refers to the event
+
 better_btn.addEventListener("click", () => {
     alert("Hello World 3");
 });
+
+better_btn.addEventListener("click", e => e.target.style.background = "blue");
 
 console.log("reached the end, everything should be working");
